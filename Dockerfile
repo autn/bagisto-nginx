@@ -15,7 +15,7 @@ RUN docker-php-ext-configure pcntl \
 RUN apk --update add python3 \
     curl
 
-RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_14.x | -E bash -
 
 RUN apk --update add nodejs \
     nodejs-npm
