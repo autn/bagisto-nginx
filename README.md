@@ -51,7 +51,7 @@ Docker compose:
 services:
 
   web_server:
-    image: autn/bagisto-nginx:0.1
+    image: autn/bagisto-nginx:latest
     volumes:
       - ./src:/var/www/app
     working_dir: /var/www/app/

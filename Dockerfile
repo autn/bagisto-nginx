@@ -19,6 +19,10 @@ RUN apk --update add python3 \
     nodejs-current \
     nodejs-npm
 
+RUN npm cache clean -f \
+    && npm install -g n \
+    && n stable
+
 RUN node -v \
     npm -v
 
