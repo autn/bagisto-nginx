@@ -13,13 +13,12 @@ RUN docker-php-ext-configure pcntl \
     && docker-php-ext-enable xdebug
 
 RUN apk --update add python3 \
-    curl \
-    nodejs \
-    nodejs-npm
+    curl
 
-RUN npm cache clean -f \
-    && npm install -g n \
-    && n stable
+RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
+RUN apk --update add nodejs \
+    nodejs-npm
 
 RUN node -v \
     npm -v
