@@ -12,9 +12,11 @@ RUN docker-php-ext-configure pcntl \
     && docker-php-ext-install pcntl bcmath sockets tokenizer \
     && docker-php-ext-enable xdebug
 
+# RUN apk add --no-cache nodejs-current  --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community"
+
 RUN apk --update add python3 \
     curl \
-    apk --update add nodejs-current \
+    nodejs-current \
     nodejs-npm
 
 RUN node -v \
